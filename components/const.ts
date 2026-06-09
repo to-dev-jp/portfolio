@@ -11,7 +11,7 @@ export const cameraPos = {
 export type Section = keyof typeof cameraPos;
 
 export const mobileCameraPos = {
-  top: { x: 0, y: -0.6, z: 11.2, rx: 0.13 },
+  top: { x: 0, y: -0.6, z: 10.9, rx: 0.13 },
   about: { x: -0.1, y: -0.2, z: 11, rx: -0.06 },
   transition01: { x: 0, y: -0.2, z: 15, rx: -0.05 },
   works01: { x: 0, y: 0, z: 30, rx: -0.02 },
