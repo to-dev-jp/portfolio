@@ -35,7 +35,7 @@
   justify-content: center;
   transition: all 0.6s ease;
   backdrop-filter: blur(10px);
-  background: rgb(20, 20, 20, 0.6);
+  background: rgb(20, 20, 20, 0.8);
 }
 
 .contactForm.open {
@@ -391,15 +391,22 @@
 }
 
 @media (min-width: 680px) {
+  .contactForm {
+    align-items: center;
+  }
+
   .contactFormWrap {
     width: 30%;
-    padding: 17vh 0;
+  }
+
+  .contactFormMain {
+    font-size: 12px;
+    margin-top: 15px;
   }
 
   .contactFormBox {
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 0.3fr 0.7fr;
+    grid-gap: 25px;
   }
 
   .overlayHead.contact {

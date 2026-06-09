@@ -407,7 +407,7 @@
   pointer-events: none;
   transition: all 0.8s ease;
   backdrop-filter: blur(10px);
-  background: rgb(20, 20, 20, 0.6);
+  background: rgb(20, 20, 20, 0.8);
 }
 
 .aboutModal.open {
@@ -598,7 +598,7 @@
   -ms-overflow-style: none;
   transition: all 0.8s ease;
   backdrop-filter: blur(10px);
-  background: rgb(20, 20, 20, 0.6);
+  background: rgb(20, 20, 20, 0.8);
 }
 
 .worksModal::-webkit-scrollbar {
