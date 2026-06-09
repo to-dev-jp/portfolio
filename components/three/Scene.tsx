@@ -224,7 +224,7 @@ function Model() {
       <VibrantGradientBackground
         width={50}
         height={50}
-        vertical={isDesktop ? -40 : -25}
+        vertical={isDesktop ? -40 : -35}
         depth={-100}
         scale={15}
         grid={400}
