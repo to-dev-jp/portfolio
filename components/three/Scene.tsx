@@ -139,7 +139,7 @@ function Model() {
       } else {
         easing.dampE(
           model.rotation,
-          [-0.05, -Math.PI / 4.8 + (mouseRef.current.x * Math.PI) / 100, 0],
+          [-0.05, -Math.PI / 4.6 + (mouseRef.current.x * Math.PI) / 100, 0],
           0.4,
           delta,
         );
