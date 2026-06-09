@@ -139,7 +139,7 @@ function Model() {
       } else {
         easing.dampE(
           model.rotation,
-          [-0.05, -Math.PI / 4.6 + (mouseRef.current.x * Math.PI) / 100, 0],
+          [-0.05, -Math.PI / 4.8 + (mouseRef.current.x * Math.PI) / 100, 0],
           0.4,
           delta,
         );
@@ -187,8 +187,12 @@ function Model() {
       <primitive object={nodes["branch010"]} />
       <primitive object={nodes["branch011"]} />
       <primitive object={nodes["branch012"]} />
+      <primitive object={nodes["branch013"]} />
+      <primitive object={nodes["branch014"]} />
+      <primitive object={nodes["branch015"]} />
       <primitive object={nodes["leaf02"]} />
       <primitive object={nodes["leaf03"]} />
+      <primitive object={nodes["leaf04"]} />
     </group>
   );
 
@@ -224,7 +228,7 @@ function Model() {
       <VibrantGradientBackground
         width={50}
         height={50}
-        vertical={isDesktop ? -45 : -35}
+        vertical={isDesktop ? -45 : -45}
         depth={-100}
         scale={15}
         grid={400}
