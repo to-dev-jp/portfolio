@@ -1,0 +1,834 @@
+/* MainContent */
+.viewPortWrapper {
+  width: 100%;
+  height: 100svh;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.viewPortWrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.viewPortWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.mainContainer {
+  inset: 0;
+  width: 100%;
+  height: 1200%;
+  position: absolute;
+}
+
+.mainSections {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Header */
+.header {
+  left: 7%;
+  top: 3.2vh;
+  width: 86%;
+  opacity: 1;
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  align-items: flex-start;
+  pointer-events: visible;
+  transition: all 0.5s ease;
+  justify-content: space-between;
+}
+
+.headerTitleWrap {
+  gap: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.headerTitleBox {
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.headerIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+
+.headerTitle {
+  gap: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.25em;
+  color: var(--main-white);
+}
+
+.headerMenuButtons {
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.menuButtonWrap {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.musicToggleButton {
+  gap: 6px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.soundIcon {
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+}
+
+.soundText {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--main-white);
+}
+
+.menuList {
+  display: none;
+}
+
+.menuButton {
+  gap: 6px;
+  display: flex;
+  cursor: pointer;
+}
+
+.menuIcon {
+  width: auto;
+  height: 16px;
+  object-fit: cover;
+}
+
+/* MainOverlay */
+.headline {
+  left: 7%;
+  top: 14svh;
+  width: 86%;
+  opacity: 1;
+  position: fixed;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.headline.none {
+  opacity: 0;
+}
+
+.mainCopy {
+  font-size: 5.8vw;
+  font-weight: 600;
+  line-height: 1.25em;
+  color: var(--main-white);
+}
+
+.subCopy {
+  font-size: 3.6vw;
+  color: var(--sub-white);
+}
+
+.introduction {
+  font-size: 10px;
+  margin-top: 15px;
+  line-height: 1.1em;
+  color: var(--sub-white);
+}
+
+.mainOverlayButtonWrap {
+  width: 100%;
+  display: grid;
+  grid-gap: 10px;
+  margin-top: 40px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mainOverlayButton {
+  gap: 6px;
+  width: 100%;
+  height: 28px;
+  display: flex;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainOverlayButton.contact {
+  background: var(--sub-white);
+}
+
+.mainOverlayButton.works {
+  border: solid 1px var(--sub-white);
+}
+
+.overlayButtonText {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+}
+
+.overlayButtonText.contact {
+  color: var(--main-green);
+}
+
+.overlayButtonText.works {
+  color: var(--main-white);
+}
+
+/* LoadingScreen */
+.loadingScreen {
+  inset: 0;
+  opacity: 1;
+  display: flex;
+  position: fixed;
+  z-index: 10000000;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  background: rgb(250, 250, 250);
+  transition: opacity 0.5s ease 0.2s;
+}
+
+.loadingScreen.none {
+  opacity: 0;
+}
+
+.loadingScreen h1,
+.loadingScreen p,
+.loadingScreen button,
+.loadingScreen span {
+  font-family:
+    "Oswald",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+.loadingScreenWrap {
+  width: 90%;
+  height: 96%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingHeadWrap {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.loadingLogo {
+  width: 26px;
+  height: 26px;
+  object-fit: cover;
+}
+
+.loadingHead {
+  font-size: 18px;
+}
+
+.loadingText {
+  font-size: 11px;
+  text-align: center;
+}
+
+.loadingText.error {
+  color: red;
+  font-size: 12px;
+}
+
+.progressBarWrap {
+  right: 0;
+  gap: 12px;
+  bottom: 0;
+  width: 35%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progressBar {
+  width: 0;
+  height: 3px;
+  transition: all 0.05s ease;
+  border-radius: calc(1px / 0);
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(160, 160, 160));
+}
+
+.progressWrap {
+  left: 0;
+  gap: 10px;
+  bottom: 0;
+  width: 35%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+}
+
+.audioSelectModal {
+  inset: 0;
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  z-index: 1000000;
+  overflow: hidden;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  transition: all 0.8s ease;
+  background: rgb(250, 250, 250);
+}
+
+.audioSelectModal.open {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.audioModalWrap {
+  width: 260px;
+}
+
+.audioHead {
+  width: 100%;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.audioButtonWrap {
+  display: grid;
+  grid-gap: 10px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.audioButton {
+  gap: 3px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(1px / 0);
+}
+
+.audioButton.left {
+  background: var(--sub-green);
+}
+
+.audioButton.right {
+  background: var(--main-green);
+}
+
+/* AboutOverlay */
+.aboutContainer {
+  left: 5%;
+  opacity: 0;
+  bottom: 5%;
+  z-index: 100000;
+  position: fixed;
+  border-radius: 5px;
+  pointer-events: none;
+  padding: 25px 25px 35px;
+  transition: all 0.4s ease;
+  width: calc(90% - 25px * 2);
+  background: rgb(30, 30, 30, 0.6);
+}
+
+.aboutBox {
+  margin-top: 10px;
+}
+
+.overlayHead {
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--main-white);
+}
+
+.overlaySubHead {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--main-white);
+}
+
+.overlayText {
+  font-size: 11px;
+  color: var(--sub-white);
+}
+
+.aboutOverlayButton {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  padding: 0 5px 10px;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--sub-white);
+}
+
+.aboutOverlayButton.show {
+  cursor: pointer;
+  pointer-events: visible;
+}
+
+.aboutModal {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  z-index: 100000;
+  pointer-events: none;
+  transition: all 0.8s ease;
+  backdrop-filter: blur(10px);
+  background: rgb(20, 20, 20, 0.6);
+}
+
+.aboutModal.open {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modalWrap {
+  width: 100%;
+  display: flex;
+  padding: 18vh 0;
+  justify-content: center;
+}
+
+.modalBox {
+  width: 90%;
+}
+
+.aboutModalCloseButton,
+.worksModalCloseButton {
+  top: 10%;
+  right: 5%;
+  cursor: pointer;
+  position: absolute;
+}
+
+.aboutTopBox {
+  margin-top: 20px;
+}
+
+.aboutProfileImg {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.modalHead {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--main-white);
+}
+
+.modalSubHead {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--main-white);
+}
+
+.modalText {
+  font-size: 11px;
+  color: var(--main-white);
+}
+
+.aboutSkillsList {
+  display: grid;
+  grid-gap: 3px;
+}
+
+.aboutMiddleBox {
+  margin-top: 30px;
+}
+
+.aboutMiddleInner {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 30% auto;
+}
+
+.aboutBottomBox {
+  margin-top: 30px;
+}
+
+/* worksOverlay */
+.worksContainer {
+  left: 5%;
+  opacity: 0;
+  bottom: 5%;
+  z-index: 100000;
+  position: fixed;
+  border-radius: 5px;
+  pointer-events: none;
+  padding: 25px 25px 35px;
+  transition: all 0.4s ease;
+  width: calc(90% - 25px * 2);
+  background: rgb(30, 30, 30, 0.6);
+}
+
+.worksBox {
+  margin-top: 10px;
+}
+
+.worksOverlayButton {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  padding: 0 5px 10px;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--sub-white);
+}
+
+.worksOverlayButton.show {
+  cursor: pointer;
+  pointer-events: visible;
+}
+
+.worksCardMeta {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.worksCardViewMore {
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workTopBox {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.workDescWrap {
+  width: 100%;
+  height: 100%;
+}
+
+.workTopImgWrap {
+  overflow: hidden;
+}
+
+.workTopImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.workCatBox,
+.workUrlBox {
+  gap: 10px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.workDescBox {
+  margin-top: 10px;
+}
+
+.workBottomImg {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.workBgWrap,
+.workSkillWrap,
+.workAboutWrap {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.worksSubImgWrap {
+  display: grid;
+  grid-gap: 15px;
+  margin-top: 50px;
+}
+
+.aboutContainer.show,
+.worksContainer.show {
+  opacity: 1;
+}
+
+.worksModal {
+  bottom: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  z-index: 100000;
+  pointer-events: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  transition: all 0.8s ease;
+  backdrop-filter: blur(10px);
+  background: rgb(20, 20, 20, 0.6);
+}
+
+.worksModal::-webkit-scrollbar {
+  display: none;
+}
+
+.worksModal.open {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.jobTitle {
+  display: none;
+}
+
+@media (min-width: 680px) {
+  .mainContainer {
+    height: 600%;
+  }
+
+  /* Header */
+  .header {
+    left: 7%;
+    top: 8vh;
+    width: 86%;
+    bottom: auto;
+  }
+
+  .headerIcon {
+    width: 40px;
+    height: 40px;
+    display: inline;
+    margin-right: 12px;
+    border-radius: 3px;
+  }
+
+  .headerTitle {
+    font-size: 1.8vw;
+    letter-spacing: 0.02vw;
+  }
+
+  .jobTitle {
+    display: block;
+    font-size: 0.7vw;
+    margin-left: 10px;
+    color: var(--sub-white);
+    transform: translateY(0.27vw);
+  }
+
+  .musicToggleButton,
+  .menuButton {
+    padding: 8px 12px;
+    border-radius: 3px;
+    border: solid 1px var(--sub-white);
+  }
+
+  /* MainOverlay */
+  .headline {
+    left: 7%;
+    top: 22%;
+  }
+
+  .mainCopy {
+    font-size: 1.7vw;
+  }
+
+  .subCopy {
+    font-size: 0.7vw;
+  }
+
+  .introduction {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .copyright {
+    top: 90%;
+    left: 7%;
+    font-size: 14px;
+  }
+
+  .mainOverlayButtonWrap {
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+  }
+
+  .mainOverlayButton {
+    width: 190px;
+    height: 30px;
+    border-radius: 3px;
+  }
+
+  .overlayButtonText {
+    font-size: 10.6px;
+    letter-spacing: 0.3px;
+  }
+
+  .menuTextBox {
+    left: 0;
+    top: 90%;
+    width: 100%;
+    display: flex;
+    display: none;
+    z-index: 10000;
+    position: fixed;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+  }
+
+  .aboutContainer {
+    left: 7%;
+    bottom: 7%;
+    width: auto;
+    padding: 20px 30px 30px;
+  }
+
+  .worksContainer {
+    left: 7%;
+    bottom: 7%;
+    width: 320px;
+    padding: 20px 30px 30px;
+  }
+
+  .overlayHead {
+    font-size: 22px;
+  }
+
+  .overlaySubHead {
+    font-size: 15px;
+  }
+
+  .overlayText {
+    font-size: 12px;
+  }
+
+  .modalWrap {
+    padding: 17vh 0;
+  }
+
+  .modalBox {
+    width: 40%;
+  }
+
+  .workTopBox {
+    height: 250px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 35%;
+  }
+
+  .workBottomImg {
+    height: 300px;
+    margin-top: 45px;
+  }
+
+  .workBgWrap,
+  .workSkillWrap,
+  .workAboutWrap {
+    margin-top: 30px;
+  }
+
+  .worksSubImgWrap {
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .aboutModalCloseButton,
+  .worksModalCloseButton {
+    top: 10%;
+    right: 30%;
+  }
+
+  .aboutSkillsList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .modalHead {
+    font-size: 26px;
+  }
+
+  .modalSubHead {
+    font-size: 16px;
+  }
+
+  .modalText {
+    font-size: 13px;
+  }
+
+  .aboutTopBox {
+    display: grid;
+    grid-gap: 30px;
+    margin-top: 20px;
+    grid-template-columns: 30% auto;
+  }
+
+  .aboutMiddleBox {
+    margin-top: 30px;
+  }
+
+  .aboutBottomBox {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 930px) {
+  .menuList {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .menuListItem {
+    gap: 2px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .menuListIcon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .menuListText {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--main-white);
+  }
+}

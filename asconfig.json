@@ -1,0 +1,27 @@
+{
+  "targets": {
+    "debug": {
+      "outFile": "public/wasm/cat.wasm",
+      "textFile": "public/wasm/cat.wat",
+      "sourceMap": true,
+      "debug": true
+    },
+    "release": {
+      "outFile": "public/wasm/cat.wasm",
+      "textFile": "public/wasm/cat.wat",
+      "sourceMap": false,
+      "optimizeLevel": 3,
+      "shrinkLevel": 1,
+      "converge": false,
+      "noAssert": false
+    }
+  },
+  "options": {
+    "bindings": "esm",
+    "importMemory": false,
+    "exportMemory": true,
+    "initialMemory": 1,
+    "maximumMemory": 64,
+    "runtime": "minimal"
+  }
+}

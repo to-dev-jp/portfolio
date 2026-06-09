@@ -1,0 +1,416 @@
+.contactHead {
+  display: inline;
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+  background: var(--bg-green);
+  color: var(--text-sub-green);
+}
+
+.contactText {
+  display: inline;
+  font-size: 18px;
+  margin-top: 30px;
+  background: var(--bg-green);
+  color: var(--text-sub-green);
+}
+
+.contactDesc {
+  display: inline;
+  font-size: 12px;
+  margin-top: 20px;
+  background: var(--bg-green);
+  color: var(--text-sub-green);
+}
+
+.contactForm {
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 10000000;
+  pointer-events: none;
+  justify-content: center;
+  transition: all 0.6s ease;
+  backdrop-filter: blur(10px);
+  background: rgb(20, 20, 20, 0.6);
+}
+
+.contactForm.open {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.contactFormWrap {
+  width: 85%;
+  display: grid;
+  grid-gap: 10px;
+  padding: 18vh 0;
+}
+
+.contactFormBox {
+  width: 100%;
+  display: grid;
+  grid-gap: 15px;
+}
+
+.contactFormHead {
+  font-size: 28px;
+  color: var(--main-white);
+}
+
+.contactFormMain {
+  opacity: 0.6;
+  font-size: 10px;
+  margin-bottom: 12px;
+  color: var(--main-white);
+}
+
+.formLabelWrap {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  border-bottom: solid 1px var(--main-white);
+}
+
+.formLabelWrap::after {
+  right: 3px;
+  width: 4px;
+  content: "";
+  height: 4px;
+  bottom: 16px;
+  position: absolute;
+  box-sizing: border-box;
+  border-top: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-right: 4px solid var(--main-white);
+  border-bottom: 4px solid var(--main-white);
+}
+
+.contactFormLabel {
+  width: 95%;
+  display: grid;
+  font-size: 16px;
+  color: var(--main-white);
+  grid-template-columns: 80px auto;
+}
+
+.submitButtonWrap {
+  width: 100%;
+  height: 46px;
+  display: grid;
+  grid-gap: 12px;
+  margin-top: 35px;
+  grid-template-columns: 1fr 0.2fr;
+}
+
+.submitButton {
+  gap: 5px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  border-radius: 3px;
+  align-items: center;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  justify-content: center;
+  color: var(--main-white);
+  background: rgb(250, 250, 250, 0.03);
+  border: solid 1px var(--main-white);
+}
+
+.submitButton::after {
+  right: 2px;
+  width: 4px;
+  content: "";
+  bottom: 2px;
+  height: 4px;
+  position: absolute;
+  box-sizing: border-box;
+  border-top: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-right: 4px solid var(--main-white);
+  border-bottom: 4px solid var(--main-white);
+}
+
+.downloadIcon {
+  width: 18px;
+  height: 18px;
+  margin-top: -3px;
+  object-fit: cover;
+}
+
+.submitLoadingBg {
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  z-index: 1000000000;
+  pointer-events: none;
+  justify-content: center;
+  transition: all 0.6 ease;
+  background: rgb(20, 20, 20, 0.1);
+}
+
+.submitLoadingBg.open {
+  opacity: 1;
+}
+
+.submitLoadingModal {
+  opacity: 0;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s ease;
+  background: rgb(20, 20, 20, 0.9);
+}
+
+.submitLoadingModal.open {
+  opacity: 1;
+}
+
+.submitLoadingModalWrap {
+  width: 50%;
+  height: 50%;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.loadingCircleBox {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  gap: 5px;
+  width: 50px;
+  height: 40px;
+  display: flex;
+  font-size: 10px;
+  margin: 20px auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner > div {
+  width: 6px;
+  height: 100%;
+  display: inline-block;
+  background-color: #dddddd;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  animation-delay: -1.1s;
+  -webkit-animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  animation-delay: -0.9s;
+  -webkit-animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  animation-delay: -0.8s;
+  -webkit-animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+
+.submitLoadingText {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+.submitResponseModal {
+  inset: 0;
+  width: 220px;
+  display: none;
+  height: 220px;
+  position: fixed;
+  border-radius: 5px;
+  z-index: 1000000000;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  animation-play-state: paused;
+  top: calc((100% - 220px) / 2);
+  left: calc((100% - 220px) / 2);
+  background: rgb(20, 20, 20, 0.9);
+  animation: flash 5s linear 0.2s both;
+}
+
+.submitResponseModal.open {
+  display: flex;
+  animation-play-state: running;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.responseIcon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.responseText {
+  color: white;
+  font-size: 11px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.nextBox {
+  gap: 8px;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkArrow {
+  width: 15px;
+  height: 15px;
+  object-fit: cover;
+}
+
+.nextText {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sub-green);
+}
+
+.contactContainer {
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  transition: all 0.4s 0.8s ease;
+}
+
+.contactContainer.show {
+  opacity: 1;
+}
+
+.contactContainer.show > button {
+  cursor: pointer;
+  pointer-events: visible;
+}
+
+.overlayHead.contact {
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--main-white);
+}
+
+.overlaySubHead.contact {
+  font-size: 18px;
+  color: var(--main-white);
+}
+
+.overlayText {
+  font-size: 11px;
+  color: var(--sub-white);
+}
+
+.contactFormCloseButton {
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: "border-box";
+  color: var(--main-white);
+  border: solid 1px var(--main-green);
+  background: rgb(200, 200, 200, 0.9);
+}
+
+@media (min-width: 680px) {
+  .contactFormWrap {
+    width: 30%;
+    padding: 17vh 0;
+  }
+
+  .contactFormBox {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 0.3fr 0.7fr;
+  }
+
+  .overlayHead.contact {
+    font-size: 46px;
+  }
+
+  .overlaySubHead.contact {
+    font-size: 24px;
+  }
+
+  .overlayText {
+    font-size: 12px;
+  }
+}
