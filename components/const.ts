@@ -1,6 +1,6 @@
 export const cameraPos = {
   top: { x: 0, y: 0, z: 15.6, rx: 0.05, ry: 0 },
-  about: { x: 0, y: 0.5, z: 13.6, rx: 0.02 },
+  about: { x: 0, y: 0.5, z: 14.6, rx: 0.02 },
   transition01: { x: 0, y: 1.5, z: 17, rx: -0.02 },
   works01: { x: 0, y: 0, z: 20, rx: 0.06 },
   works02: { x: 0, y: 0, z: 23, rx: 0.06 },
